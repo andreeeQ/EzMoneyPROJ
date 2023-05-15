@@ -1,7 +1,7 @@
 import React from 'react'
 import { initializeApp } from 'firebase/app';
 import {getDatabase, set, ref, update} from 'firebase/database';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithRedirect, GoogleAuthProvider, getRedirectResult, signInWithEmailAndPassword} from 'firebase/auth';
 
 
 const firebaseConfig = {
@@ -17,6 +17,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth();
+const provider = new GoogleAuthProvider();
 
 function ClearFields() {
 
@@ -82,6 +83,34 @@ alert('User Loged In!');
 
 };
 
+
+
+const logInwithgoogle = (e) =>{
+  signInWithRedirect(auth, provider);
+
+
+  getRedirectResult(auth)
+.then((result) => {
+  
+
+  // The signed-in user info.
+  const user = result.user;
+
+  // name = displayName
+  //email = email
+  //photo = photoURL
+
+  alert(user.displayName);
+
+  // IdP data available using getAdditionalUserInfo(result)
+  // ...
+}).catch((error) => {
+  // Handle Errors here.
+ 
+
+  // ...
+});
+};
 
 
 
@@ -152,6 +181,7 @@ class EntryPage extends Component {
               </ul>
             </fieldset>
             <button type="button" onClick={logIn}>Login</button>
+            <button type="button" onClick={logInwithgoogle}>Sign in Google</button>
             <button type="button" onClick={() => this.changeView("signUp")}>Create an Account</button>
           </form>
         )
