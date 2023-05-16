@@ -23,6 +23,7 @@ const auth = getAuth();
 const logOut = (e) =>{
 signOut(auth).then(() => {
   // Sign-out successful.
+  alert('User logged out!');
 }).catch((error) => {
   // An error happened.
 });
