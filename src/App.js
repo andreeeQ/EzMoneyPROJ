@@ -1,6 +1,6 @@
 import React from 'react'
 import "./App.css"
-import Navbar from './components/Navbar';
+import NavbarEntry from './components/NavbarEntry';
 import EntryPage from './pages/Entrypage';
 
 
@@ -8,7 +8,7 @@ const App = () => {
 
     return (
         <div className="App">
-          <Navbar/>
+          <NavbarEntry/>
           <EntryPage/>
         
           
