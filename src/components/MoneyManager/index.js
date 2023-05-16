@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import {v4} from 'uuid'
+import { getAuth, signOut } from "firebase/auth";
 
 import TransactionItem from '../TransactionItem'
 import MoneyDetails from '../MoneyDetails'
@@ -16,6 +17,17 @@ const transactionTypeOptions = [
     displayText: 'Expenses',
   },
 ]
+
+const auth = getAuth();
+
+const logOut = (e) =>{
+signOut(auth).then(() => {
+  // Sign-out successful.
+}).catch((error) => {
+  // An error happened.
+});
+}
+
 
 class MoneyManager extends Component {
   state = {
@@ -95,6 +107,7 @@ class MoneyManager extends Component {
     return incomeAmount
   }
 
+
   getBalance = () => {
     const {transactionsList} = this.state
     let balanceAmount = 0
@@ -114,11 +127,15 @@ class MoneyManager extends Component {
     return balanceAmount
   }
 
+ 
   render() {
     const {titleInput, amountInput, optionId, transactionsList} = this.state
     const balanceAmount = this.getBalance()
     const incomeAmount = this.getIncome()
     const expensesAmount = this.getExpenses()
+
+    
+  
 
     return (
       <div className="app-container">
@@ -129,7 +146,9 @@ class MoneyManager extends Component {
               Welcome back to your
               <span className="money-manager-text"> EzMoney Manager</span>
             </p>
-            
+            <button type="submit"  onClick={logOut}>
+                Logout
+              </button>
         
           </div>
           <MoneyDetails
