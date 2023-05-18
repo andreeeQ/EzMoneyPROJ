@@ -7,10 +7,6 @@ MoneyWalletWeb is a web-based application for managing personal finances and tra
 - **User Registration and Authentication**: Users can create an account and securely log in to the application.
 - **Dashboard**: Users are presented with an overview of their finances, including account balances, income, and expenses.
 - **Transaction Tracking**: Users can add, categorize, and track their income and expenses, allowing them to gain insights into their spending habits.
-- **Budgeting**: Users can set budgets for different expense categories and monitor their progress over time.
-- **Financial Reports**: The application generates various reports, such as expense summaries, income breakdowns, and budget comparisons, to help users understand their financial situation.
-- **Reminder Notifications**: Users can set reminders for bill payments and receive notifications to ensure timely payments.
-- **Currency Conversion**: The application supports currency conversion, allowing users to view their finances in different currencies.
 - **Data Privacy and Security**: User data is stored securely and protected with encryption and appropriate access controls.
 
 ## Installation
@@ -30,10 +26,25 @@ To install and run MoneyWalletWeb locally, follow these steps:
    ```
 
 3. Install the required dependencies:
+
    ```bash
    npm install
    ```
+
 4. Start the development server:
    ```bash
    npm start
    ```
+
+For more information about React JS Installation visit: [here](https://legacy.reactjs.org/docs/getting-started.html).
+
+## Technologies Used
+
+- **Frontend**: React, HTML, CSS
+- **Backend**: Node.js
+- **Database**: Firestore
+- **Authentication**: Firebase Authentication
+
+## Contributing
+
+Contributions to MoneyWalletWeb are welcome! If you find any issues or have suggestions for new features, please open an issue or submit a pull request. Make sure to follow the contribution guidelines when contributing to this project.
