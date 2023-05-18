@@ -89,7 +89,7 @@ const Supportpage = () => {
               You agree to our privacy policy.
             </label>
           </div>
-          <button type="submit">Send message</button>
+          <button type="submit" className='but1'>Send message</button>
         </form>
       </div>
     );
