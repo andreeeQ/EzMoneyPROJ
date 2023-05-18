@@ -36,7 +36,9 @@ To install and run MoneyWalletWeb locally, follow these steps:
    npm start
    ```
 
-For more information about React JS Installation visit: [here](https://legacy.reactjs.org/docs/getting-started.html).
+For more information about React JS Installation visit: React's docs [here](https://legacy.reactjs.org/docs/getting-started.html).
+
+For Firebase setup and Deployment follow official docs [here](https://firebase.google.com/docs/hosting/quickstart).
 
 ## Technologies Used
 
