@@ -26,11 +26,6 @@ const database = getDatabase(app);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
-function ClearFields() {
-  document.getElementById('email').value = '';
-  document.getElementById('password').value = '';
-  document.getElementById('username').value = '';
-}
 
 function SignUp() {
   var email = document.getElementById('email').value;
@@ -99,7 +94,6 @@ const EntryPage = () => {
 
   const changeView = (view) => {
     setCurrentView(view);
-    ClearFields();
   };
 
   useEffect(() => {

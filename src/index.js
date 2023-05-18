@@ -24,7 +24,7 @@ import {
       element: <Dashboard/>,
     },
     {
-      path: "/transactions",
+      path: "/aboutus",
       element: <Transactionpage/>,
     },
     {
