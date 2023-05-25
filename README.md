@@ -2,6 +2,8 @@
 
 MoneyWalletWeb is a web-based application for managing personal finances and tracking expenses. This project aims to provide users with a convenient and intuitive platform to track their income, expenses, and overall financial health.
 
+Try it now: https://ezmoney-2466e.web.app/
+
 ## Features
 
 - **User Registration and Authentication**: Users can create an account and securely log in to the application.
